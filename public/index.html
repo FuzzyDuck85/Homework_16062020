@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>💩Not XE - The World's Trusted Currency Authority: Money Transfers & Free Exchange Rate Tools</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/bundle.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <img src="./css/XE_logo_mini.png">
+    <h1>🏴‍☠️Not The World's Trusted Currency Authority🏴‍☠️</h1>
+      <label for="amount">Amount:</label>
+      <input type="text" id="amount" v-model="amount" placeholder="Enter value"><br><br>
+      <label for="initial-currency">From</label>
+      <select id="initial-currency" v-model="initialCurrency">
+        <option disabled value="">Choose Currency</option>
+        <option v-for="(rate, currency) in allTheRates" :value="currency"> {{ currency }} </option>
+      </select>
+      <label for="final-currency">To</label>
+      <select id="final-currency" v-model="finalCurrency">
+        <option disabled value="">Choose Currency</option>
+        <option v-for="(rate, currency) in allTheRates" :value="currency">
+          {{ currency }}
+        </option>
+      </select>
+      <h2>
+        {{ amount }} {{ initialCurrency }} = </h2>
+        <h3 id="converted-to">{{ convertAmount }} {{ finalCurrency }}
+      </h3>
+    </div>
+  </body>
+</html>

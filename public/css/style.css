@@ -1,0 +1,56 @@
+body{
+	background: lightblue;
+	color: black;
+	font-family: tahoma;
+	margin-right: 15px;
+	text-align: left;
+	margin-bottom: 25px;
+	margin-left: 0;
+	text-align: center;
+}
+h1{
+	color: blue;
+}
+
+h2{
+	color: darkblue;
+	background-color: lightgrey
+}
+
+h3{
+	color: gold;
+	font-size: 32px;
+	background: blue
+}
+
+
+/* .country-name{
+	display: inline-block;
+}
+.country-flag{
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 12px;
+}
+
+.main-container{
+	width: 800px;
+	position: absolute;
+	border-radius: 10px;
+	padding: 50px;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%,-40%);
+	background: white;
+	box-shadow: 0 12px 10px -6px $blue-dark;
+}
+
+.currency-input{
+	width: 70%;
+	margin-right: 5px;
+	font-size: 20px;
+	height: 40px;
+	border-radius: 5px;
+	border: 1px solid #CCC;
+	padding-left: 10px;
+} */
