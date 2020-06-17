@@ -13,13 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
       this.fetchRates();
     },
     computed: {
-      rateFrom: function(){
+      rateFrom(){
         return this.allTheRates[this.initialCurrency];
       },
-      rateTo: function(){
+      rateTo(){
         return this.allTheRates[this.finalCurrency];
       },
-      convertAmount: function(){
+      convertAmount(){
         const initialAmount = this.amount / this.rateFrom;
         const finalAmount = initialAmount * this.rateTo;
         return finalAmount.toFixed(2);
@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
       fetchRates: function(){
         const request = fetch("https://api.exchangeratesapi.io/latest")
         .then(response => response.json())
-        .then((data) => {
-          this.allTheRates = data.rates;
+        .then((response) => {
+          this.allTheRates = response.rates;
           this.allTheRates["EUR"] = 1;
         })
       }
